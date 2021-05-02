@@ -30,5 +30,16 @@ public class BlackJack {
     public static void main(String[] args) {
         //(L)
         // 메인 실행 부분
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("사용할 덱의 개수를 입력해주세요 >> ");
+        int num = scanner.nextInt();
+        CardPool cardPool = new CardPool(num);
+        System.out.println(num + "개의 덱, "+ num*52 +"개의 카드를 사용합니다.");
+
+        while (true){
+            Player user = new Player();
+            user.addCard(cardPool.drawCard());
+
+        }
     }
 }
